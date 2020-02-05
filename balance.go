@@ -24,9 +24,10 @@ type BalanceParams struct {
 // Balance is the resource representing your Stripe balance.
 // For more details see https://stripe.com/docs/api/#balance.
 type Balance struct {
-	Available []*Amount `json:"available"`
-	Livemode  bool      `json:"livemode"`
-	Pending   []*Amount `json:"pending"`
+	Available       []*Amount `json:"available"`
+	ConnectReserved []*Amount `json:"connect_reserved"`
+	Livemode        bool      `json:"livemode"`
+	Pending         []*Amount `json:"pending"`
 }
 
 // Amount is a structure wrapping an amount value and its currency.
